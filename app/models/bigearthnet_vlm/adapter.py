@@ -56,7 +56,7 @@ class BigEarthNetVLMAdapter(RemoteSensingModel):
         try:
             async with httpx.AsyncClient(timeout=settings.MODEL_HTTP_TIMEOUT) as client:
                 resp = await client.post(
-                    f"{settings.GEOCHAT_ENDPOINT.rsplit('/', 1)[0]}/bigearthnet_predict",
+                    settings.BIGEARTHNET_ENDPOINT,
                     json={
                         "optical_path": image_path,
                         "sar_path": sar_path,

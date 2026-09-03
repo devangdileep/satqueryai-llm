@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     CHANGECHAT_ENDPOINT: str = "http://localhost:8002/v1/predict"
     PRITHVI_ENDPOINT: str = "http://localhost:8003/v1/predict"
     SAR_FUSION_ENDPOINT: str = "http://localhost:8004/v1/predict"
+    BIGEARTHNET_ENDPOINT: str = "http://localhost:8005/bigearthnet_predict"
 
     # Timeout for HTTP model inference requests (in seconds)
     MODEL_HTTP_TIMEOUT: float = 60.0
